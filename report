@@ -1,0 +1,447 @@
+\documentclass[11pt,a4paper,oneside,openright]{report}
+%\documentclass[11pt,a4paper,openright]{report}
+\usepackage{anysize}
+\usepackage{svpmcoestyle}   %% Thesis Title Page
+\usepackage{latexsym}
+%\usepackage{pictex}
+\usepackage{fancyvrb}
+\usepackage{fancyhdr}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{rawfonts}
+\usepackage{setspace}
+%\usepackage{newcent} %the options are:  palatino, times, newcent, bookman
+
+\marginsize{1.5in}{1in}{0.75in}{0.75in}
+
+\usepackage[pdftex,
+        colorlinks=true,
+        urlcolor=black,       % \href{...}{...} external (URL)
+        filecolor=black,     % \href{...} local file
+        linkcolor=black,       % \ref{...} and \pageref{...}
+    	citecolor=black,
+        pdftitle={M. Tech. Thesis},
+        pdfauthor={Satyajit Rai},
+        pdfsubject={Dual MAC},
+        pdfkeywords={ad-hoc multihop MAC},
+%        pagebackref,
+%        pdfpagemode=true,
+        bookmarksopen=true]{hyperref}
+\pdfcompresslevel=9
+
+
+
+
+\title{ Video Surveillance }
+\author{Rutuja Narayan Patil}
+\date{June 4, 2021}
+
+\begin{document}
+\def\what{A SEMINAR REPORT}
+\def\title{Video Surveillance}
+
+\def\degree{{\bf \large BACHELOR OF ENGINEERING\\(Computer Engineering)}}
+\def\who{\large Rutuja Narayan Patil}
+\def\roll{\Large  353}
+\def\guide{\Large  Guide Name\\ Mrs.Prof.V.V.Sawant}
+\pagenumbering{roman}
+
+%\ifpdf
+\pdfbookmark[1]{Title}{title} %%This is pdf specefic
+%\fi
+
+%--------------Title Page-------------
+\svpmcoetitlepage
+
+
+
+%---------------Certificate------------------
+
+\newpage
+\begin{center}
+\underline{\textbf{\LARGE CERTIFICATE}}
+\end{center}
+\vskip 0.2in
+ \hspace{0.2in}{This is to certify that {\bf Rutuja Narayan Patil} has successfully submitted her seminar
+ report to the Department of Computer Engineering, SVPMCOE, Malegaon bk,on
+ \newline
+ \par {\bf "Video Surveillance"}
+ \newline
+ \par during the academic year 2020-20121 in the partial fulfilment towards completion of Third Year of {\bf Bachelor of Engineering} in {\bf Computer Engineering.}}
+
+\vspace{1.5in}
+\centerline {\hspace{0cm}Mrs.Prof.V. V. Sawant \hspace{6cm}Mr. H. R. Kumbhar}
+\centerline {\hspace{0cm}Assistant Professor, \hspace{6.1 cm} Assistant Professor,}
+\centerline {\hspace{0cm}Guide, \hspace{8 cm} HOD,}
+\centerline {\hspace{0cm}Dept of Computer Engineering.\hspace{2.8cm} Dept of Computer Engineering.}
+
+\vspace*{1in}
+\begin{center}
+{\bf Mr. S. M. Mukane}\\
+    Principal\\
+SVPMCOE, Malegaon bk.
+\end{center}
+
+\vspace*{1in}
+\begin{flushleft}
+\vspace{0.1in}
+{Place:Shivnagar Vidya Prasarak Mandal's College of Engineering Malegaon bk.}\\
+{Date :4-June-2021 \line(1,0){100}}
+\end{flushleft}
+
+
+\newpage
+
+%
+%%---------------- A C K N O W L E D G M E N T S  -----------------
+\onehalfspacing
+\cleardoublepage
+\vspace*{2in}
+\section*{\begin{center} {\Huge{Acknowledgments}}\end{center}}
+%\thispagestyle{empty}
+\addcontentsline{toc}{chapter}{\quad\,\,{Abstract}}
+\subparagraph{}
+
+ I am feel happy in forwarding this seminar report as an image of sincere efforts. The Successful seminar reflects my work, effort of my guide in giving me good information.
+\subparagraph{} I would like to express my heartiest thanks to my seminar guide {\bf Mrs.Prof.V. V. Sawant} for his undying support which makes me possible to make this seminar knowledgeable. He not only provided me the literature and guidance to study but also the platform which required for me to prepare best for this seminar.            
+\subparagraph{} I am also equally indebted to our seminar coordinator I am also equally indebted to our seminar coordinator {\bf   Mrs.P. N. Kate-Deshmukh } who has been a constant source of inspiration and guiding star in achieving my goal. 
+\subparagraph{} I thank {\bf Mr. H. R. Kumbhar}, Head  of  Department  of Computer Engineering and respected Principal {\bf Mr. S. M. Mukane} for supporting and providing all facilities to complete the work.
+I am thankful to and fortunate enough to get constant encouragement, support and guidance from entire teaching staff of Department of computer engineering which helped me in successfully completing my seminar work.
+\begin{flushright}
+\textbf{Ms. Rutuja Narayan Patil}\\ 
+\end{flushright}
+
+
+
+%
+%%---------------- A B S T R A C T -----------------
+\onehalfspacing
+\cleardoublepage
+\vspace*{2in}
+\section*{\begin{center} {\Huge{Abstract}}\end{center}}
+%\thispagestyle{empty}
+\addcontentsline{toc}{chapter}{\quad\,\,{Abstract}}
+
+ \hspace 
+
+\subparagraph{} "Video Surveillance" is an active area of research and
+provides promising security measures for consumer applications.
+To ease consumer surveillance investigations, Video Synopsis (VS)
+serves as a powerful tool to assess hours of video in a shorter
+retro of time by projecting multiple objects concurrently. The
+optimization module in VS framework is considered to be a key
+module, yet to date, only traditional optimization techniques have
+been addressed for energy minimization.it is seen that the proposed
+scheme exhibits superior performance to minimize the overall
+energy cost with lesser computational time. The proposed scheme
+has a potential to quickly review consumer surveillance video
+data in a smart and efficient way.The video surveillance process includes the identification of areas of concern and the identification of specific cameras or groups of cameras that may be able to view those areas. If it is possible to identify schedules.
+\subparagraph{}Most existing surveillance systems require human interaction where security guards watch the monitor wall and manually trigger alarms when they detect security violations. Due to the lack of attention of the operator, the possibility of missing alarms is high, even for well-trained security personnel. These issues lead to the need for an automated video surveillance system, an artificial intelligent system, which is designed to automatically detects, tracks, and records security violations in a monitored scene. In this seminar, I have discussed the automation of surveillance through CCTV cameras and IP cameras. The architecture of the cameras and their advantages and disadvantages are also discussed. Video surveillance is having vast number of applications. I have specifically focused on farm surveillance. 
+
+
+
+
+
+%-----------------Table of Contents-------------------
+%\renewcommand{\tableofcontents}{Table of Contents}
+\newpage
+%\ifpdf
+\pdfbookmark[1]{Table of Contents}{contents} %%This is pdf specefic
+%\fi
+\tableofcontents
+%\thispagestyle{empty}
+\addtocontents{toc}{\protect\thispagestyle{empty}}
+\newpage
+
+
+%\thispagestyle{empty}
+\addcontentsline{toc}{chapter}{\quad\,\,{List of Figures}}
+\addtocontents{lof}{\protect\thispagestyle{empty}}
+%\newpage
+%\listoftables
+%\addcontentsline{toc}{chapter}{\quad\,\,{List of Tables}}
+
+
+
+
+%----------------------- Chapter 1 ---------------------
+\chapter{Introduction}\label{chap:introduction}
+\pagenumbering{arabic}
+\section {Introduction}
+\subparagraph{} Nowadays, security is measure concern in every
+organization. To this satisfy issue the organizations use
+surveillance cameras. The limitation in using them is that
+there must be an operator to watch the stream from the
+cameras and take respective decisions. The use of camerabased surveillance has extended from security to tracking,
+environment and threat analysis and many more. By using
+the power of modern computing and hardware it is possible
+to automate the process.
+The emergence of machine learning, Deep learning, and
+computer vision tools have made this process efficient and
+feasible for general purpose use. So instead of using human
+support for monitoring and insight generation, we can let the
+processor and machine learning system do the task in a
+more efficient and errorless way. Here we have mentioned
+few approaches which had helped us in solving this problem.The past five years faces the explosive data increase
+on Internet, especially on mobile networks. According
+to Cisco’s Visual Networking Index, mobile video will
+increase 9 fold between 2016 and 2021, accounting for 78
+percent of total mobile data traffic by the end of 2021.[1] This
+huge amount of data is consumed by various services, for
+example, video on demand (VOD) streaming, video conferencing, Augmented Reality (AR) and Virtual Reality (VR)
+applications and video surveillance.
+\section {Literature Survey }
+\paragraph{} The application of "video surveillance" is now not only limited to provide security for area but expanded to the various sectors1) Accessing the IP-based camera by using the WANSCAM
+or XXCAM vendor software,
+2) Accessing the IP-based camera by Firefox® web
+browser, and
+3) Accessing the IP camera by MATLAB with SIMULINK on
+an internet system.
+Bring the automation in Surveillance is key part of the
+project. Automation means system must be capable of
+tracking the objects, detecting the face, human motion,
+helping to detect hazardous situation, etc. For implementing
+the concept of automation, I have referred some paper and
+got useful insights from it.
+
+%----------------------- Chapter 2 ---------------------
+\chapter{Literature Survey}\label{chap:Related work}
+\section {Using H.264 video compression in IP video surveillance systems}
+\paragraph{} H.264 is an open video compression standard. Uniquely, H.264 is the first compression format to be formed by collaboration between members of both the IT and telecommunications industries and each have their own name for it. H.264 is the name used by the ITU-T (International Telecommunication Union) and MPEG-4 Part 10 AVC (Advanced Video Coding) is the name used by the ISO (International Organization for Standardization). 
+
+\section {Benefits for security surveillance }
+\paragraph{} Demands from the security industry constantly push for higher resolution monitoring and faster frame rates without any compromise on image quality. With conventional compression formats this just isn’t possible but with the introduction of H.264 we can see many benefits which can improve the quality of security surveillance applications.
+
+\section {Block delta modulation for compression of surveillance video }
+\paragraph{} This paper describes a new methodology for coding the surveillance video signals by means of delta modulation and statistical estimations. This codec is simpler than the CCITT MPEG or H.261 Recommendation and is more suitable for the usage in close-circuit TV (CCTV) systems. With the statistical characteristics resulting from the sequence of images in surveillance systems, the proposed compression scheme is based on 8/spl times/8 pixel blocks of temporal differences. According to a modal selection of blocks, each block is further coded in different modes: the BDM (block delta modulation), ABDM (adaptive block delta modulation), DCT and ZERO modes. 
+
+%----------------------- Chapter 3 ---------------------
+
+\chapter{Motivation}\label{chap:Related work}
+\section {H.264 Standard Technology}
+\paragraph{} To compress your files, the codec looks for unnecessary files or frames it can reduce or eliminate without impacting the final version of the video. This process is done automatically by your surveillance camera, but you can often choose which style of video compression to use and the compression level within the video:
+\begin{enumerate}
+\item H.264 compression – this is the newest, and most efficient video compression codec, and it works by taking small groups of frames and evaluating them together as a series to eliminate duplicate content that appears in each frame without changing
+\item MJPEG compression – also called motion JPEG, works by evaluating each frame of the video, compressing them, and sending them as individual JPEG images
+\item MPEG4 compression – this is an older style of video compression, and has largely been replaced by H.264
+\end{enumerate}
+
+\section { Potential Shortcomings of NVR Architecture}
+\paragraph{} Network Video Recorder (NVR) systems are the most popular storage option for surveillance deployments with small numbers of cameras; however, they were originally developed for IT data processing. Like all data processing equipment, both the processing unit and memory are packaged in a single chassis to reduce cost. When applied to video surveillance, NVRs use disk drives to store large quantities of video data and appeal to security customers because of their abundance and affordability.When a surveillance system has fewer than 75 cameras with low bandwidth, NVRs normally work quite well. They improve functionality by over-provisioning processing power and storage to compensate for any inefficiencies that arise from differences between IT data and video streams.
+\subsection{ Features-}
+\begin{enumerate}
+\item Daytime & Nighttime Video Recording
+Whether it’s 12 p.m. or 12 a.m., our video surveillance cameras will be able to capture clear video to monitor your property.  
+\item Intrusion Recording
+\item Mobile Alerts & Notifications
+If you do set up intrusion recording capabilities for your video surveillance system, you can also get notifications on your phone when alarms go off in your building, then you can watch or play back the incident from your phone
+\item Centrally Managed Videos
+If your business operates from more than one location, 
+\item Video Analytics 
+\end{enumerate}
+
+
+%----------------------- Chapter 4 ---------------------
+\chapter{System Architecture}\label{chap:Related work}
+\hspace{0.2in}Video surveillance systems are considered one of the most reliable methods of protecting various places. For many years, the systems have been continuously evolving, both in the respect of the equipment used and its functionality.
+So far, the most popular applications have been based on DVRs. Despite their popularity, they have certain shortcomings (aside from quality limits), first of all the necessity of providing an individual cable for each camera, the second - limited number of channels (the next ones will require another DVR), and finally - one monitoring center (with the DVR inside).
+\paragraph{}Transmission technique based on division of signals into packets allows to reach a new functionality of video monitoring systems. The systems based on analog cameras and DVRs equipped with network interfaces can be connected to any kind of computer network (LAN or WAN - e.g. DSL) and controlled from any point of the network. Advanced solutions allow to control a number of DVRs, which can be utilized in large installations.
+But there is still the problem of providing an individual cable for each camera.
+\paragraph{}To solve the problems caused by analog video transmission from CCTV cameras, one should use devices dedicated for work in IP networks. They include IP cameras and video servers that convert analog video into digital signal. IP technology allows to distribute the system in any way, providing adequate network connection. Physically, the connection can be made through phone line, twisted-pair cable, wireless link, fiber optics, or even TV cable (cable TV broadband services).
+The architecture of such a system depends on the equipment used and the software installed. The basic form involves using additional software that manages devices coming from one manufacturer. The number of cameras and video servers is limited. The software is in fact only client application - there is no central point of the system. Every surveillance post can connect to any camera in the system.
+It is a major limitation, because network devices cannot simultaneously connect with unlimited number of clients. The next client stations would overload the system.
+\paragraph{}The problem can be partially solved using devices with Dual Stream function. They allow to transmit two streams with independently determined parameters. The wider stream (e.g. MJPEG) is used for data transmission to recording server (NVR - Network Video Recorder), whereas the limited second stream (e.g. MPEG-4) provides video data for remote clients.
+\paragraph{}But also this architecture limits the number of simultaneous connections among the users (clients) and the the cameras. The best solution seems to be client-server architecture. This architecture allows to build very efficient installations where cameras and video servers are connected to one or more servers.The servers are responsible for managing the system, the clients connect only with them.
+The main advantage of this solution is isolation of cameras and the links between the cameras and servers from outgoing traffic. There is no risk of overloading the main part of the system in the case of excessive number of clients. Additionally, extension of the system by connecting next cameras and servers does not affects client stations which are capable of connecting to many servers at the same time.
+\paragraph{}The only problem of this architecture may be a failure of the managing server, which would break connection between cameras and clients. It can be overcome by using highly reliable servers.
+\paragraph{}Each of the concepts presented above is suitable for different applications. The systems based on DVRs are usually used in single buildings etc., for several or more such buildings it is much better (or often only feasible) to implement network solution
+\paragraph{}In the case of distributed systems (scattered locations) there are very important transmission parameters of IP devices and the network. Depending on the number and deployment of clients there is used adequate managing software.
+
+%----------------------- Chapter 5 ---------------------
+\chapter{Approaches for Solving the Problem}\label{chap:Related work}
+\section{ Qumulo Provides A Window Into Storage With Modern File Storage Analytic}
+\paragraph{}These systems are deployed and closely monitored by safety and security professionals – think of situations ranging from traffic cameras to schools and campus environments, or body-cameras worn by law enforcement and even retail stores looking to prevent shoplifting. These cameras broadcast back to a control room for real-time viewing, and ultimately all of the video feeds are recorded and kept for a specific time frame. This video footage consumes a lot of storage capacity depending on the cameras’ resolutions and retention times required of these assets.
+\paragraph{}As with all areas of technology, innovation is sweeping its way into the video surveillance market. Improved camera technology now allows for very small camera devices to record and capture video footage in high definition and in some cases ultra high definition (4K). Gone are the days of black and white, fuzzy video cameras that provided very little definition. Camera technology has come a long way, to the point that you can zoom in on a person’s shirt and see the smallest patterns on it. Why is this important for video surveillance? Because the more detail that can be captured, the better the chances are of seeing something that couldn’t have been seen before. The ability for security professionals to go back and review video footage captured by a video surveillance system for training purposes, forensics, defect detection, and personal safety depends upon the data collected by these systems to be clear and usable.
+
+\vspace{600pt}
+\section{Eyes Across All Aspects of the Video Surveillance Infrastructure}
+\paragraph{} Powerful real-time analytics are built into Qumulo’s file system. They provide real, actionable data to enhance the administrator’s window into the video surveillance world they are watching, by providing a window into the storage.
+Gone are the days of wasting time guessing what happens when the VSS infrastructure changes and hoping the storage can keep up. Qumulo’s analytics improve overall efficiencies by giving you insight into the unseen impact of storage in video surveillance..
+\paragraph{} Qumulo has partnered with Evolving Solutions to bring you an enterprise-proven hybrid cloud file system to help meet your video surveillance challenges; while staying in line with your storage budgets, and providing real-time visibility, scale and control of all your data.
+
+%----------------------- Chapter 6 ---------------------
+\chapter{ Video Surveillance Automation }
+\section {Manual Surveillance}
+Before video surveillance came into existence, operators were hired to monitor the system to protect it from threats. But the manual surveillance was having some disadvantages as follows:
+\begin{enumerate}
+\item It is very impractical.
+\item It is very costly because we need to pay the operators.
+\item It makes problem because of the lack of attention of the operators.
+\itemIt needs the awareness for the situation 
+\end{enumerate}
+To solve the above problems, video surveillance came into existence. It has benefits over manual surveillance:
+\begin{enumerate}
+\item Computer catches the video and monitors the activities. 
+\item More channels can be used by buying more servers and licenses. Once we have bought it, then it can be used afterwards without paying to anybody. 
+\item It is cheaper than manual surveillance. 
+
+\end{enumerate}
+
+%----------------------- Chapter 7----------------------
+\chapter{Types of Cameras }\label{chap:Related work}
+There are two types of cameras which are used for video surveillance: 1. Analog Camera 2. IP camera 
+\section {  Analog Camera}
+\paragraph{}Analog cameras record images and then send the signal over a coaxial cable to a DVR (Digital Video Recorder). The DVR converts the video from analog to digital signals, compresses the file, and stores it on a hard drive. ... Then, they can receive and send data over a computer network rather than going through a DVR first.
+\subsection{  architecture of analog camera}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=13cm,height=8cm]{Report/analog camera architecture.jpg}
+    \caption{analog camera architecture}
+    \label{fig:DVR}
+\end{figure}
+\begin{enumerate}
+\item {\bf Camera -} 
+Cameras are the starting point for most CCTV systems. There are designed for monitoring very specific locations, to day/night cameras, and powerful PTZ domes for patrolling large areas. 
+ 
+\item {\bf Monitor -}
+Operators view footage from a central location on a monitor higher lines of resolution for better picture quality. Monitors can be dedicated (meaning they display video from a single camera), or call-up (meaning operators can access multiple cameras at the same time). 
+\item {\bf Cables -}
+Coaxial cable is required for transmitting video footage from the cameras. This is one of the drawbacks of analog CCTV, as the cable can be expensive and difficult to install, especially for larger camera networks, and those where cameras must be positioned in difficult locations. 
+\item {\bf  Digital Video Recorder (DVR) -}
+DVRs convert the analog footage to digital, which helps to extend storage capacity, makes it much easier to search archived footage, and also allows users to stream video over a network for remote viewing from multiple locations. 
+\end{enumerate}
+\section {IP Camera }
+\paragraph{}An IP camera captures and sends video footage over an IP network, allowing users to view, record, store, and manage their video surveillance images either locally or remotely over the network infrastructure. The camera can be placed wherever there, an IP network connection. It has its own IP address and unlike a webcam, doesn't require a connection to a PC in order to operate. Along with streaming video footage, network cameras can include a number of additional functionalities, such as pan/tilt/zoom operation, motion detection, audio surveillance, integration with alarms and other security systems, automated alerts, intelligent higher-quality images, stability, and scalability as new cameras can be added to the network at any time. 
+\subsection{ Architecture of IP Camera }
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=13cm,height=8cm]{Report/IP camera architecture.jpg}
+    \caption{IP camera architecture}
+    \label{fig:DVR}
+\end{figure}
+\begin{enumerate}
+\item {\bf IP Camera -} 
+An Internet Protocol camera, or IP camera, is a type of digital video camera that receives control data and sends image data via an IP network
+\item {\bf Network Video Software (NVR) -}
+A network video recorder (NVR) is a specialized computer system that includes a software program that records video in a digital format to a disk drive, USB flash drive, SD memory card or other mass storage device. An NVR contains no dedicated video capture hardware.
+\item {\bf  Power over Ethemet  -}
+Power over Ethernet (PoE) allows for installation of remote or outside equipment without having to connect to AC power. This allows power to be delivered to more areas without the need to install additional electrical infrastructure or to have power outlets at every endpoint.
+\item {\bf Image Sensor -}
+When light passes through a camera lens, it goes to the image sensor and activates the pixels on the sensor. Each pixel registers the amount of light it sees, and this creates the image your camera records. Two types of image sensors are used: 
+\begin{enumerate}
+\item  CCD Technology -Charge coupled devices, or CCD image sensors, have been used in cameras for more than 30 years. They specialize in low light situations to create images that are less noisy, as their sensors are more sensitive to light than CMOS sensors. CCD sensors are more expensive and complex than other sensors, and can use up to 100 times the power a CMOS sensor would use. 
+\item CMOS Technology -CMOS technology is a predominant technology for manufacturing integrated circuits. CMOS stands for “Complementary Metal Oxide Semiconductor”. Microprocessors, batteries, and digital sensors among other electronic components make use of this technology due to several key advantages.[7]
+\end{enumerate}
+\end{enumerate}
+
+
+%------------------------Chapter 8----------------------
+
+\chapter{Advantages and Disadvantages}
+\section {Advantages}
+\begin{enumerate}
+\item  Security Cameras Increase Overall Safety
+\item Video Surveillance Can Help Prevent Shoplifting & Theft
+\item Prevent Fraud
+\item Video Surveillance Can Prevent Employee Theft
+\item Improves Safeguards
+\item Protects Against Burglary
+\item Improved Perception of Concern for Customer Safety
+\item  Recognize Shoplifting & Deter Threats Before They Happen
+\item Provides a Record of All Activity In Your Business
+\item Can Help Avoid legal Claims and Fraud
+\end{enumerate}
+\section {Disadvantages}
+\begin{enumerate}
+\item cost – Probably the biggest downside of a video surveillance camera system is how expensive it is.
+\itemdifficult to use – If you are not a techie person, you may have a hard time learning how to use your video surveillance camera system as some systems can be very complex.
+\item privacy issues – This is mostly an issue for business owners. Employees can be offended by the presence of cameras in the breakroom and the backroom. A hidden video surveillance camera can cause problems in court if illegal behavior is recorded by the system. 
+\item Surveillance Systems Are Easily Abused. A con of surveillance cameras in public places is that these security cameras may be abused.
+\item Cameras can deter criminals, but they can’t stop theft. They can only
+record the footage and help the law enforcement to catch the criminal
+later on.
+\end{enumerate}
+
+%----------------------- Chapter 9----------------------
+
+\chapter{Future Scope}
+\begin{enumerate}
+\item {\bf Companies will seek to increase their video surveillance ROI :}
+It’s no secret that many organisations originally invested in video surveillance simply to tick a box or qualify for an insurance plan. The cameras feed into monitoring rooms which are often unattended, footage is usually watched retrospectively when an incident has already taken place, and there is little that can be done to contain its consequences. While some businesses believe video surveillance will at least act as a deterrent, thieves and intruders know they can avoid being recognised if they simply disguise their distinctive features, so security cameras won’t put them off their unlawful plans.
+
+\item {\bf Video surveillance will deliver business insights, not just security :}Video surveillance plays a key role in helping security staff protect the premises they were assigned to. With the help of video analytics and artificial intelligence, this tool can prove an exceptional ally for monitoring room operators who no longer have to rely on their own eyes to analyse security footage.
+
+That being said, in 2020, organisations across a variety of sectors will learn that video analytics applied to surveillance can also provide invaluable insight which can help them make more informed business decisions. From analysing customer behaviour in retail stores, to optimising parking spaces, to better managing warehouse operations, companies will expand the applications of video-based technology, thereby maximising the return on this investment.
+
+In today’s multifaceted threat landscape, security should be a key element in any business strategy. The appetite for sophisticated, user-friendly and cost-effective surveillance solutions in undeniable, so the organisations that know how to leverage video analytic.[4]
+\end{enumerate}
+
+%----------------------- Chapter 10----------------------
+%-------------Summery----------------------------
+
+\chapter{Conclusion}
+\subparagraph{}
+Video surveillance is commonly used in public
+transportation, including by transit agencies, for a
+wide variety of reasons. Some agencies have adopted
+policies that address, for example, how they provide
+notice of the presence of video surveillance and/or
+explain how long surveillance data are retained.
+
+Although a transit agency’s use of video surveil-
+lance appears to be constitutional, there are privacy
+risks associated with using video surveillance. A
+transit agenefs video surveillance of a speciﬁc area
+could be challenged because it violates a statute, a
+person‘s reasonable expectation of privacy, or a
+person‘s common law right to privacy under state
+law. A transit agency may have a more robust legal
+defense to any possible privacy claims when the
+agency is able to show that prior to adopting a video
+surveillance system, it took steps to minimize any
+negative effects that the system could have on the
+public’s “constitutional rights and values?” Some
+legal commentaries and reports argue that video
+surveillance should be proportional to an agencfs
+need for surveillance and should adhere to certain
+core principles as discussed in the digest.
+
+In general, although a permanent video surveil-
+lance system may pose a greater risk to privacy, the
+courts have upheld long-duration or even perma-
+nent public video surveillance. Some states or locali-
+ties and transit agencies, respectively, have laws or
+polices that limit how long a public agency may
+retain or archive video surveillance data.
+
+
+
+%-----------------bibliography---------------------------
+\newpage
+\begin{thebibliography}{li}
+\addcontentsline{toc}{chapter}{\quad\,\,{\bibname}}
+\label{chap:references}
+\bibitem{ref1}
+[1] https://www.cisco.com/c/en/us/solutions/collateral/service-provider/
+visual-networking-index-vni/mobile-white-paper-c11-520862.html
+\bibitem{ref2}
+[2] https://www.irjet.net/archives/V7/i6/IRJET-V7I675.pdf
+\bibitem{ref3}
+T. Stütz and A. Uhl, {\em “A survey of H.264 AVC/SVC encryption,” }IEEE Trans. Circuits Syst. Video Technol., vol. 22, no. 3, Mar. 2012.
+\bibitem{ref4}
+https://www.ifsecglobal.com/video-surveillance/what-the-future-holds-for-video-surveillance/
+\bibitem{ref5}
+C. R. Wren, A. Azarbayejani, T. Darrell, and A. P. Pentland, “Pfinder:
+Real-time tracking of the human body,” IEEE Transactions on Pattern
+Analysis and Machine Intelligence, vol. 19, no. 7, pp. 780–785, 1997.
+\bibitem{ref6}
+D. K. Panda and S. Meher, “A new wronskian change detection
+model based codebook background subtraction for visual surveillance
+applications,” J. Visual Commun. Image Represent., vol. 56, pp. 52–72,
+Oct. 2018.
+
+\end{thebibliography}
+\end{document}
+
+\end{document}
