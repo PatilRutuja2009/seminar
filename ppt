@@ -1,0 +1,485 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (10/11/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+
+\documentclass{beamer}
+
+\mode<presentation> {
+
+% The Beamer class comes with a number of default slide themes
+% which change the colors and layouts of slides. Below this is a list
+% of all the themes, uncomment each in turn to see what they look like.
+
+%\usetheme{default}
+%\usetheme{AnnArbor}
+%\usetheme{Antibes}
+%\usetheme{Bergen}
+%\usetheme{Berkeley}
+%\usetheme{Berlin}
+%\usetheme{Boadilla}
+%\usetheme{CambridgeUS}
+%\usetheme{Copenhagen}
+%\usetheme{Darmstadt}
+%\usetheme{Dresden}
+%\usetheme{Frankfurt}
+%\usetheme{Goettingen}
+%\usetheme{Hannover}
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+\usetheme{Madrid}
+%\usetheme{Malmoe}
+%\usetheme{Marburg} 
+%\usetheme{Montpellier}
+%\usetheme{PaloAlto}
+%\usetheme{Pittsburgh}
+%\usetheme{Rochester}
+%\usetheme{Singapore}
+%\usetheme{Szeged}
+%\usetheme{Warsaw}
+
+% As well as themes, the Beamer class has a number of color themes
+% for any slide theme. Uncomment each of these in turn to see how it
+% changes the colors of your current slide theme.
+
+%\usecolortheme{albatross}
+%\usecolortheme{beaver}
+%\usecolortheme{beetle}
+%\usecolortheme{crane}
+%\usecolortheme{dolphin}
+%\usecolortheme{dove}
+%\usecolortheme{fly}
+%\usecolortheme{lily}
+%\usecolortheme{orchid}
+%\usecolortheme{rose}
+%\usecolortheme{seagull}
+%\usecolortheme{seahorse}
+%\usecolortheme{whale}
+%\usecolortheme{wolverine}
+
+%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+%\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
+
+%\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+}
+
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title[Video Surveillance]{Video Surveillance} % The short title appears at the bottom of every slide, the full title is only on the title page
+
+\author[Rutuja Narayan Patil ]{
+  \bf Rutuja Narayan Patil \\\medskip
+  {\small \url{rutupatil3855@gmail.com} } \\ 
+  {\small \url{https://www.linkedin.com/in/rutuja-patil-074272203/}}}
+\institute[SVPMCOE] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+{
+{
+  Department of Computer Engineering, Shivnagar Vidya Prasarak Mandal's College of Engineering \\
+  Malegaon BK, Baramati-413115} \\ % Your institution for the title page
+\medskip
+%\textit{john@smith.com} % Your email address
+}
+\date{} % Date, can be changed to a custom date
+
+\begin{document}
+
+\begin{frame}[plain]
+  \titlepage
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Content:}
+  \begin{block}
+    {}
+    Content
+  \end{block}
+  \begin{itemize}
+    \item Problem Statement
+    \item Introduction
+    \item Literature review
+    \item System Architecture
+    \item Algorithms
+    \item Technology
+    \item Technical details
+    \item equipment used
+    \item Advantages
+    \item Disadvantages
+    \item Conclusion
+    \item Reference
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Problem Statement :}
+  \begin{itemize}
+    \item Activity detection is a major problem in smart videos surveillance. It is a fundamental problem in computer vision, i.e. to detect the activity of human in surveillance videos. These applicants need real-time detection performance, but it is generally very time consuming to detect the actual activity.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Introduction :}
+  \begin{itemize}
+    \item Video surveillance is one of the most obvious security measures we see on a daily basis.Video surveillance is a rapidly growing industry. Driven by low-hardware costs,heightened security fears and increased capabilities; video surveillance equipment is being deployed ever more widely, and with ever greater storage and ability for recall. It allow some distinction between “privacy intrusive” and “privacy neutral” video data that can be the basis for protecting privacy in video surveillance systems .
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Literature review : }
+  \begin{itemize}
+    \item Method for gathering the Real time Camera streams.
+    \item Implementation of Closed-circuit Television(CCTV) Using Wireless     Internet Protocol (IP).
+    \item The Design and Implementation of a Wireless Video Surveillance System.
+    \item IOT based Smart Surveillance System.
+    \item AUTOMATION IN SURVEILLANCE.
+    \item ANALYZING TECHNIQUES.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{System Architecture :}
+  \begin{itemize}
+    \item Video surveillance systems are considered one of the most reliable methods of protecting various places.[1]
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=5cm,height=4cm]{Monitoring system based on DVR (1) (1).png}
+    \caption{Monitoring system based on DVR}
+    \label{fig:DVR}
+\end{figure}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \begin{itemize}
+    \item first of all the necessity of providing an individual cable for each camera, the second - limited number of channels (the next ones will require another DVR), and finally - one monitoring center (with the DVR inside).
+    \item Transmission technique based on division of signals into packets allows to reach a new functionality of video monitoring systems. 
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=5cm,height=4cm]{Monitoring system based on DVRs with network interfaces.png}
+    \caption{Monitoring system based on DVRs with network interfaces}
+    \label{fig:DVR}
+\end{figure}
+
+\item  
+  \end{itemize}
+\end{frame}
+
+
+
+\begin{frame}
+ 
+\begin{itemize}
+    \item Advanced solutions allow to control a number of DVRs, which can be utilized in large installations.But there is still the problem of providing an individual cable for each camera.
+    \item To solve the problems caused by analog video transmission from CCTV   cameras, one should use devices dedicated for work in IP networks. 
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=5cm,height=4cm]{IP CCTV system based on client software.png}
+    \caption{IP CCTV system based on client software}
+    \label{fig:DVR}
+\end{figure}
+    \item The problem can be partially solved using devices with Dual Stream function. They allow to transmit two streams with independently determined parameters.
+    \item This architecture limits the number of simultaneous connections among the users (clients) and the the cameras. The best solution seems to be client-server architecture.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=5cm,height=4cm]{IP CCTV system using Dual Stream devices.png}
+    \caption{IP CCTV system using Dual Stream devices}
+    \label{fig:DVR}
+\end{figure}
+    \item  This architecture allows to build very efficient installations where cameras and video servers are connected to one or more servers.The servers are responsible for managing the system, the clients connect only with them.The main advantage of this solution is isolation of cameras and the links between the cameras and servers from outgoing traffic.
+
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+   \item Additionally, extension of the system by connecting next cameras and servers does not affects client stations which are capable of connecting to many servers at the same time.
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=5cm,height=4cm]{IP CCTV system based on server - client architecture.png}
+    \caption{IP CCTV system based on server - client architecture}
+    \label{fig:DVR}
+\end{figure}
+    \item The only problem of this architecture may be a failure of the managing server, which would break connection between cameras and clients. It can be overcome by using highly reliable servers
+    
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  \begin{itemize}
+   \item Each of the concepts presented above is suitable for different applications. The systems based on DVRs are usually used in single buildings
+    \item In the case of distributed systems there are very important transmission parameters of IP devices and the network. Depending on the number and deployment of clients there is used adequate managing software.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Algorithms :}
+  \begin{itemize}
+    \item {\bf Viola-Jones algorithm :}Facial detection via the Viola-Jones algorithm is a common method used due to its high detection rate and fast processing speed. The algorithm can be summed up in four steps: feature selection, feature evaluation, feature learning to create a classifier, and cascading classifiers.
+    \item {\bf LBPH algorithm :}The Local Binary Pattern Histogram(LBPH) algorithm is a simple solution on face recognition problem, which can recognize both front face and side face.
+    \item {\bf R-CNNs(Region based CNNs):}Instead of working on a massive number of regions,or going through each and every pixel and localised part of the image to search for the presence of an object.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \begin{itemize}
+    \item {\bf Region-based Fully Convolutional Network(R-FCN) : } R-FCN is a region-based detector for object detection.this region-based detector is fully convolutional with almost all computation shared on the entire image.
+    \item {\bf YOLO (You Only Look Once) :}You Only Look Once or YOLO is one of the popular algorithms in object detection used by the researchers around the globe. According to the researchers at Facebook AI Research, the unified architecture of YOLO is extremely fast in manner.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \begin{itemize}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=8cm,height=8cm]{Video Surveillance/unsupervised machine learning.png}
+    \caption{unsupervised machine learning}
+    \label{fig:DVR}
+\end{figure}
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Technology:}
+  \begin{itemize}
+    \item Video surveillance provides security personnel with advance notice of   breaches in security, including hostile and terrorist acts, and is a part   of the plan to protect personnel and assets. 
+    \item Flying IOT and Drones at the Edge.
+    \item Artificial Intelligence (AI) technology those security agents can save   their eyes.
+    \item In 2019, it’s easy to take security cameras and other surveillance      equipment for granted. 
+    \item Now a days video surveillance is more widely used than ever by          businesses, schools, governments and law enforcement.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Technical details : }
+  \begin{itemize}
+    \item Video Compression : H.264
+    \item Analog Video Input : 16 Channel 32 Channel
+    \item HDMI/VGA Output : 1 @ upto 1920 x 1080P
+    \item Encoding Resolution : 720P / WD1 / 4CIF / CIF
+    \item Dual Stream : Supported
+    \item Stream type : Video
+    \item Synchronous Playback : 16 Channel
+    \item Playback resolution : 720P
+    \item Network protocols : TCP/IP, PPPoE, DHCP, EZVIZ Cloud P2P, DNS, DDNS, NTP, SADP, SNMP, SMTP, NFS,ISCSI, UPnP, HTTPS
+    \item Hard Disk : 1 SATA Interface
+    \item Capacity : Up to 6 TB capacity for each disk
+   
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \begin{itemize}
+    \item Network Interface : 1:10M / 100M self-adaptive Ethernet interface
+    \item USB port : 2 x USB 2.0
+    \item Power Supply : 12 VDC
+    \item Consumption : < 8 w (without hard disk or DVR R/W)
+    \item Working temperature : -10 C to 55 C
+    \item Working humidity : 10% ~ 90%
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \begin{itemize}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=8cm,height=10cm]{steps.jpeg}
+    \caption{steps}
+    \label{fig:DVR}
+\end{figure}
+
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{equipment used : }
+  \begin{itemize}
+    \item {\bf Surveillance Cameras :} Video surveillance cameras help to collect data as it occurs in real time.
+    \item {\bf NVR :}Network video recorders are designed for use with IP camera systems to record,manage, view video.
+    \item {\bf Cabling :}CCTV systems require hard wiring installation in order to transmit video data, which can be cumbersome to install as it requires multiple cables. quality of the video transmission can be limited.
+    \item {\bf PoE Network Switches :}Power over Ethernet switches, commonly referred to as PoE network switches create a system that allows electrical power as well as data to pass along safely through Ethernet cabling.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \begin{itemize}
+    \item {\bf PoE Midspan :}Mid spans employ Power over Ethernet to supply power to network cameras.Ethernet cable without the need to install power outlets orelectrical cabling
+    \item {\bf DVR :}Digital video recorders are used with CCTV camera technology to record data captured by the camera.
+  \end{itemize}
+\end{frame}  
+
+
+\begin{frame}{Advantages :}
+  \begin{itemize}
+    \item Reduce Loss, Theft and Vandalism. ...
+    \item Experience Easier Installation and More Effective Implementation. ...
+    \item Improve Storage and Accessibility. ...
+    \item Enable Remote Monitoring. ...
+    \item Reduce Costs & Scale More Easily. ...
+    \item Save Time with Distributed Intelligence. ...
+    \item Upgrade Your Management Software. ...
+    \item Reduce crime rates in public areas –
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Disadvantages : }
+  \begin{itemize}
+    \item  Cameras can deter criminals, but they can't stop theft. They can only record the footage and help the law enforcement to catch the criminal later on.
+    \item cost – Probably the biggest downside of a video surveillance camera system is how expensive it is.
+    \item to use – If you are not a techie person, you may have a hard time learning how to use your video surveillance camera system as some systems can be very complex.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Conclusion}
+   A video surveillance system mainly provides an efficient method for surveillance purposes and is aimed to be highly beneficial for any person or organization.Video surveillance cameras can become gold mines if we prepare them with visual recognition technologies. 
+   They can serve multiple functions for both public and private organizations .which to date still underestimate them. Companies and public authorities: seize the opportunity! 
+\end{frame}
+
+\begin{frame}{References}
+  \begin{itemize}
+    \item [1]https://www.dipolnet.com/architecture-of-video-surveillance-systems-based-on-ip-networks-bib701.htm
+    \item  S. Javanbakhti, S. Zinger, and P. H. N. De With, “Fast scene analysis
+for surveillance & video databases,” IEEE Trans. Consum. Electron.,
+vol. 63, no. 3, pp. 325–333, Aug. 2017.
+    \item C. R. Wren, A. Azarbayejani, T. Darrell, and A. P. Pentland, “Pfinder:
+Real-time tracking of the human body,” IEEE Transactions on Pattern
+Analysis and Machine Intelligence, vol. 19, no. 7, pp. 780–785, 1997.
+    \item D. K. Panda and S. Meher, “A new wronskian change detection
+model based codebook background subtraction for visual surveillance
+applications,” J. Visual Commun. Image Represent., vol. 56, pp. 52–72,
+Oct. 2018.
+   \end{itemize}
+ \end{frame}
+
+
+
+
+
+
+% \section{Introduction}
+% \begin{frame}
+%   \frametitle{Introduction}
+%   \begin{enumerate}
+%     \item The failure of the Electricity Transformer is a crucial issue and has a major effect on the electricity system reliability. 
+%     \item Failure causes a extra burden over the accounts and in turns it affect the level and quality  of the service provided.
+%     \item If you predict remaining life of the transformer by some means causes relief on accounts-surprised!  
+%     \item The transformer fails because of concentration of the vital gas components such as $CO_2$, $CO$, $CFC$, Temperature inside the transformer etc.
+%   \end{enumerate}
+% \end{frame}
+%
+% \section{Innovativeness}
+%
+% \begin{frame}
+%   \frametitle{Innovativeness}
+%   \begin{enumerate}
+%     \item To understand the remaining life of the electricity transformer,there are some manual techniques.
+%     \item By manual method the transformer is opened and checking the concentration of the $CO_{2}$, $CO$  and $CFC$ 
+%     \item This causes physical damage to the transformer in turns it help to reduce the life of the transformer.
+%     \item Without opening the transformer can we find out the concentration of the components like $CO_2$, $CO$, $CFC$ and temperature.- YES- by means of sensor network
+%     
+%   \end{enumerate}
+%   \end{frame}
+% \begin{frame}
+%   \frametitle{Continued...}
+%   \begin{enumerate}
+%     \item The sensors like, $CO$, $CO_2$, $CFC$ and temperature sensors deployed on the the transformer reports, their readings to the host system. 
+%     \item Based upon the previous learning and data received from sensor network host system calculates predicted remaining life of the transformer.
+%   \end{enumerate}
+% \end{frame}
+%
+% \section{Objective}
+%
+% \begin{frame}
+%   \frametitle{Objective}
+%
+%   \begin{enumerate}
+%     \item The main objective of this study is to associate LIFE of the transformer with the different components involved inside the transformer. 
+%     \item Build the association between $CO$, $CO_2$, $CFC$ and temperature, so that it will to predict the remaining life of the transformer.
+%    
+%   \end{enumerate}
+% \end{frame}
+%
+% \section{Methodology}
+%
+% \begin{frame}
+%   \frametitle{Methodology}
+% \begin{enumerate}
+%   \item The methodology discussed is based upon association rule mining-Building the strong association between different components and form the rules with which life will calculated.
+%   \item It is a supervised machine learning methodology, it takes decision based upon the previous learning.
+% \end{enumerate}
+%   
+% \end{frame}
+%
+% \begin{frame}
+%   \frametitle{Applicability}
+% \begin{enumerate}
+%   \item Per month thousands of electricity transformer get failed because of different reasons.
+%   \item The most important reason is concentration of the different gases and temperature of the transformer. 
+%   \item This decides the remaining life of the transformer.
+%   \item Predicting the remaining life of the transformer can help to reduce extra burden at the failure time of the transformer 
+% \end{enumerate}
+%   
+% \end{frame}
+%
+%
+% \section{Conclusion}
+%
+% \begin{frame}
+%   \frametitle{Conclusion}
+%
+%   \begin{itemize}
+%     \item Easy to use
+%     \item Good results
+%   \end{itemize}
+% \end{frame}
+%
+% %------------------------------------------------
+%
+% \begin{frame}
+% \frametitle{References}
+% \footnotesize{
+% \begin{thebibliography}{99} % Beamer does not support BibTeX so references must be inserted manually as below
+% \bibitem[Smith, 2012]{p1} John Smith (2012)
+% \newblock Title of the publication
+% \newblock \emph{Journal Name} 12(3), 45 -- 678.
+% \end{thebibliography}
+% }
+% \end{frame}
+%
+% %------------------------------------------------
+%
+
+\begin{frame}
+\Huge{\centerline{Thank You..!!!}}
+\Huge{\centerline{The End...}}
+\end{frame}
+
+
+%----------------------------------------------------------------------------------------
+
+\end{document} 
